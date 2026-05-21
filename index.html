@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="h-full antialiased">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>港力工程 | 太陽能 · 水電 · 打拆僭建 | KONGPOWER LIMITED</title>
+<meta name="description" content="港力工程 — 機電署註冊電業承辦商。AI 太陽能安裝維修、水電裝修、打拆僭建。村屋、學校、屋苑，全港服務。"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+HK:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans','Noto Sans HK',system-ui,sans-serif;background:#fafaf9;color:#1c1917;line-height:1.6;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
+  a{color:inherit;text-decoration:none} ul{list-style:none}
+  ::selection{background:#059669;color:#fff}
+  .max-w-7xl{max-width:80rem;margin:0 auto;padding:0 1.25rem}
+  @media(min-width:768px){.max-w-7xl{padding:0 2.5rem}}
+
+  /* TOPBAR */
+  .topbar{background:#022c22;color:#6ee7b7;font-size:.75rem}
+  .topbar-inner{max-width:80rem;margin:0 auto;padding:.5rem 1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.25rem}
+  .topbar-inner a{color:#6ee7b7} .topbar-inner a:hover{color:#fde047}
+
+  /* HEADER */
+  header{background:rgba(250,250,249,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(231,229,228,.6);position:sticky;top:0;z-index:40}
+  .header-inner{max-width:80rem;margin:0 auto;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+  .logo-link{display:flex;align-items:center;gap:.625rem}
+  .logo-icon{width:2.75rem;height:2.75rem;border-radius:1rem;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.25rem;font-weight:900;box-shadow:0 10px 15px -3px rgba(5,150,105,.2)}
+  .logo-text .brand{font-size:1.25rem;font-weight:800;line-height:1.2;letter-spacing:-.025em}
+  .logo-text .brand em{color:#059669;font-style:normal}
+  .logo-text .sub{font-size:.625rem;color:#78716c;letter-spacing:.1em}
+  nav{display:none;gap:2rem;font-size:.875rem;font-weight:500;color:#44403c}
+  @media(min-width:1024px){nav{display:flex}} nav a:hover{color:#047857}
+  .cta-top{background:#059669;color:#fff;padding:.625rem 1.25rem;border-radius:9999px;font-size:.875rem;font-weight:700;box-shadow:0 10px 15px -3px rgba(5,150,105,.2);transition:all .2s;white-space:nowrap}
+  .cta-top:hover{background:#047857;box-shadow:0 10px 15px -3px rgba(5,150,105,.4)}
+
+  /* HERO */
+  .hero{position:relative;background:#fafaf9;overflow:hidden}
+  .hero-glow{position:absolute;top:-10rem;right:-10rem;width:24rem;height:24rem;background:#fde047;border-radius:50%;filter:blur(100px);opacity:.3;animation:glowPulse 4s ease-in-out infinite;pointer-events:none}
+  @keyframes glowPulse{0%,100%{opacity:.3}50%{opacity:.15}}
+  .hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(rgba(120,113,108,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,113,108,.05) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+  .hero-inner{position:relative;max-width:80rem;margin:0 auto;padding:5rem 1.25rem;display:grid;gap:2.5rem;align-items:center}
+  @media(min-width:768px){.hero-inner{padding:7rem 2.5rem;grid-template-columns:6fr 4fr;gap:2.5rem}}
+  .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:#d1fae5;color:#065f46;border:1px solid #a7f3d0;padding:.375rem 1rem;border-radius:9999px;font-size:.75rem;font-weight:700;margin-bottom:1.75rem}
+  .hero-badge .dot{width:.5rem;height:.5rem;border-radius:50%;background:#059669;animation:pulseDot 2s infinite}
+  @keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.4}}
+  .hero h1{font-size:2.6rem;font-weight:800;line-height:1.05;letter-spacing:-.025em;margin-bottom:1.5rem;text-wrap:balance;color:#1c1917}
+  @media(min-width:768px){.hero h1{font-size:3.5rem}}
+  .hero h1 .gradient{background:linear-gradient(135deg,#059669,#10b981,#eab308);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero p{font-size:1.125rem;color:#57534e;margin-bottom:2.5rem;max-width:32rem;line-height:1.7}
+  .hero-actions{display:flex;flex-direction:column;gap:.75rem}
+  @media(min-width:640px){.hero-actions{flex-direction:row}}
+  .btn-dark{background:#1c1917;color:#fff;padding:1rem 1.75rem;border-radius:9999px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:all .2s;font-family:inherit;font-size:.95rem;cursor:pointer;border:none}
+  .btn-dark:hover{background:#292524}
+  .btn-outline{border:2px solid #d6d3d1;color:#1c1917;padding:1rem 1.75rem;border-radius:9999px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:all .2s;font-family:inherit;font-size:.95rem;background:transparent;cursor:pointer}
+  .btn-outline:hover{border-color:#1c1917}
+  .hero-checks{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2.5rem;font-size:.875rem;color:#78716c}
+  .hero-checks span{display:flex;align-items:center;gap:.5rem}
+  .hero-checks .check{color:#059669;font-size:1.125rem;font-weight:700}
+  .hero-img{aspect-ratio:4/5;border-radius:1.5rem;overflow:hidden;background:linear-gradient(135deg,#d1fae5,#fef3c7);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;box-shadow:0 25px 50px -12px rgba(5,150,105,.1)}
+  .hero-img .emoji{font-size:5rem}
+  .hero-img .label{font-size:1.25rem;font-weight:800;color:#065f46}
+  .hero-img .sub{font-size:.75rem;color:#059669}
+
+  /* SECTIONS */
+  .section{padding:5rem 0}
+  .section-light{background:#fafaf9}
+  .section-white{background:#fff;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4}
+  .section-dark{background:#1c1917;color:#fafaf9;position:relative;overflow:hidden}
+  .section-dark::before{content:'';position:absolute;top:-5rem;left:-5rem;width:20rem;height:20rem;background:#059669;border-radius:50%;filter:blur(100px);opacity:.08;pointer-events:none}
+  .section-dark::after{content:'';position:absolute;bottom:-5rem;right:-5rem;width:20rem;height:20rem;background:#fde047;border-radius:50%;filter:blur(100px);opacity:.06;pointer-events:none}
+  .section-dark>*{position:relative;z-index:1}
+  .section-label{display:inline-flex;align-items:center;gap:.5rem;background:#d1fae5;color:#065f46;border:1px solid #a7f3d0;padding:.25rem .875rem;border-radius:9999px;font-size:.75rem;font-weight:700;margin-bottom:1rem}
+  .section-title{font-size:2.25rem;font-weight:800;line-height:1.15;letter-spacing:-.015em;margin-bottom:1.25rem;text-wrap:balance}
+  @media(min-width:768px){.section-title{font-size:2.75rem}}
+  .section-title em{color:#059669;font-style:normal}
+  .section-dark .section-title{color:#fafaf9}
+  .section-dark .section-title em{color:#fde047}
+  .section-desc{font-size:1.05rem;color:#57534e;max-width:40rem;line-height:1.7;margin-bottom:3rem}
+  .section-dark .section-desc{color:#d6d3d1}
+
+  /* CARDS */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+  .card{background:#fff;border:1px solid #e7e5e4;border-radius:1.25rem;padding:2rem;transition:all .3s;position:relative;overflow:hidden}
+  .card:hover{border-color:#a7f3d0;box-shadow:0 10px 30px -10px rgba(5,150,105,.1);transform:translateY(-2px)}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#059669,#10b981);opacity:0;transition:opacity .3s}
+  .card:hover::before{opacity:1}
+  .card-icon{width:3rem;height:3rem;border-radius:.875rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem}
+  .card-icon.green{background:#d1fae5;color:#059669}
+  .card-icon.blue{background:#e0e7ff;color:#4f46e5}
+  .card h3{font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#1c1917}
+  .card p{font-size:.925rem;color:#57534e;line-height:1.65}
+  .card-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1rem}
+  .card-tag{background:#f5f5f4;color:#78716c;padding:.2rem .7rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+
+  .section-dark .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+  .section-dark .card h3{color:#fafaf9}
+  .section-dark .card p{color:#a8a29e}
+  .section-dark .card:hover{border-color:rgba(253,224,71,.3);background:rgba(253,224,71,.04)}
+  .section-dark .card-icon.green{background:rgba(5,150,105,.2);color:#34d399}
+  .section-dark .card-tag{background:rgba(255,255,255,.06);color:#a8a29e}
+
+  /* CLIENTS */
+  .client-row{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+  .client-chip{background:#fff;border:1px solid #e7e5e4;padding:.875rem 1.75rem;border-radius:1rem;font-size:1rem;font-weight:700;text-align:center;transition:all .2s}
+  .client-chip:hover{border-color:#059669;box-shadow:0 4px 12px rgba(5,150,105,.06)}
+  .client-chip .icon{font-size:1.5rem;display:block;margin-bottom:.25rem}
+
+  /* STATS */
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem}
+  .stat-card{text-align:center;padding:2rem 1.5rem}
+  .section-dark .stat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:1.25rem}
+  .stat-icon{font-size:2.5rem;margin-bottom:.75rem}
+  .stat-label{font-size:.875rem;font-weight:500}
+  .section-dark .stat-label{color:#a8a29e}
+
+  /* FLOW */
+  .flow{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.75rem}
+  .flow-step{background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:1.25rem 1.5rem;text-align:center;min-width:110px;transition:all .2s}
+  .flow-step:hover{border-color:#059669}
+  .flow-step .icon{font-size:1.75rem}
+  .flow-step .label{font-size:.8rem;font-weight:700;margin-top:.4rem}
+  .flow-arrow{font-size:1.5rem;font-weight:bold;color:#059669}
+  @media(max-width:640px){.flow{flex-direction:column}.flow-arrow{transform:rotate(90deg)}}
+
+  /* AGENTS */
+  .agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem}
+  .agent-card{background:#fff;border:1px solid #e7e5e4;border-radius:1.25rem;padding:1.75rem;text-align:center;transition:all .3s}
+  .agent-card:hover{border-color:#a7f3d0;box-shadow:0 10px 20px -5px rgba(5,150,105,.08);transform:translateY(-2px)}
+  .agent-icon{font-size:2.5rem;margin-bottom:.75rem}
+  .agent-name{font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+  .agent-role{font-size:.8rem;color:#78716c;line-height:1.5}
+
+  /* REVIEWS */
+  .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+  .review-card{background:#fff;border:1px solid #e7e5e4;border-radius:1.25rem;padding:2rem}
+  .review-stars{color:#f59e0b;font-size:1.25rem;margin-bottom:.75rem}
+  .review-text{font-size:.95rem;color:#57534e;line-height:1.7;margin-bottom:1rem;font-style:italic}
+  .review-author{font-weight:700;font-size:.85rem}
+  .review-location{font-size:.75rem;color:#78716c}
+
+  /* FAQ */
+  .faq-list{max-width:700px;margin:0 auto}
+  .faq-item{border-bottom:1px solid #e7e5e4;padding:1.25rem 0}
+  .faq-q{font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .faq-q:hover{color:#059669}
+  .faq-a{font-size:.925rem;color:#57534e;line-height:1.7;padding-top:.75rem;display:none}
+  .faq-a.open{display:block}
+
+  /* BRANDS */
+  .brand-row{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+  .brand-chip{background:#fff;border:1px solid #e7e5e4;padding:1rem 2rem;border-radius:1rem;font-weight:700;font-size:.95rem;text-align:center}
+
+  /* CONTACT FORM */
+  .form-group{margin-bottom:1rem;text-align:left}
+  .form-group label{display:block;font-size:.8rem;font-weight:600;color:#44403c;margin-bottom:.3rem}
+  .form-group input,.form-group textarea{width:100%;padding:.8rem 1rem;border:2px solid #e7e5e4;border-radius:.75rem;font-size:.95rem;font-family:inherit;outline:none;resize:vertical;transition:border .2s}
+  .form-group input:focus,.form-group textarea:focus{border-color:#059669}
+  .form-group textarea{min-height:100px}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+  .section-dark .contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:1.5rem;text-align:center}
+  .contact-card .icon{font-size:1.75rem;margin-bottom:.4rem}
+  .contact-card .label{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem}
+  .section-dark .contact-card .label{color:#a8a29e}
+  .contact-card .value{font-size:.95rem;font-weight:700}
+
+  /* BUTTONS */
+  .btn-emerald{background:#059669;color:#fff;padding:1rem 1.75rem;border-radius:9999px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:all .2s;font-family:inherit;font-size:.95rem;border:none;box-shadow:0 10px 25px -5px rgba(5,150,105,.35);cursor:pointer}
+  .btn-emerald:hover{background:#047857;transform:translateY(-1px)}
+  .section-dark .btn-emerald{background:#059669}
+  .section-dark .btn-emerald:hover{background:#10b981}
+
+  /* FOOTER */
+  footer{background:#fff;border-top:1px solid #e7e5e4;padding:3rem 1.25rem;text-align:center;color:#78716c;font-size:.85rem}
+  footer .name{font-weight:700;color:#1c1917}
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:50;width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.75rem;box-shadow:0 8px 25px rgba(37,211,102,.4);transition:all .3s;animation:wpPulse 2s infinite}
+  .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 12px 30px rgba(37,211,102,.5)}
+  @keyframes wpPulse{0%,100%{box-shadow:0 8px 25px rgba(37,211,102,.4)}50%{box-shadow:0 8px 40px rgba(37,211,102,.6)}}
+  @media(min-width:768px){.whatsapp-float{width:4rem;height:4rem;font-size:2rem;bottom:2rem;right:2rem}}
+
+  /* CHAT MODAL */
+  #chatModal{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+  #chatModal.show{display:flex}
+  .chat-box{background:#fff;border-radius:1.5rem;width:min(90vw,480px);max-height:80vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+  .chat-header{background:#022c22;color:#fff;padding:1rem 1.25rem;display:flex;align-items:center;gap:.75rem}
+  .chat-header .agent-avatar{width:2.5rem;height:2.5rem;border-radius:.75rem;background:rgba(5,150,105,.3);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+  .chat-header .agent-title{font-weight:700;font-size:1rem}
+  .chat-header .agent-sub{font-size:.7rem;color:#6ee7b7}
+  .chat-close{margin-left:auto;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:.25rem .5rem}
+  .chat-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.75rem;max-height:50vh}
+  .chat-msg{max-width:85%;padding:.75rem 1rem;border-radius:1rem;font-size:.9rem;line-height:1.5;animation:msgIn .3s}
+  @keyframes msgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+  .chat-msg.user{align-self:flex-end;background:#059669;color:#fff;border-bottom-right-radius:.25rem}
+  .chat-msg.agent{align-self:flex-start;background:#f5f5f4;color:#1c1917;border-bottom-left-radius:.25rem}
+  .chat-msg .typing{display:flex;gap:4px;padding:4px 0}
+  .chat-msg .typing span{width:6px;height:6px;border-radius:50%;background:#78716c;animation:bounce 0.6s infinite}
+  .chat-msg .typing span:nth-child(2){animation-delay:.15s}
+  .chat-msg .typing span:nth-child(3){animation-delay:.3s}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .chat-input{display:flex;gap:.5rem;padding:.75rem 1rem;border-top:1px solid #e7e5e4;background:#fff}
+  .chat-input input{flex:1;padding:.7rem 1rem;border:2px solid #e7e5e4;border-radius:999px;font-size:.9rem;outline:none;font-family:inherit}
+  .chat-input input:focus{border-color:#059669}
+  .chat-input button{background:#059669;color:#fff;border:none;border-radius:999px;padding:.6rem 1.25rem;font-weight:700;cursor:pointer;font-family:inherit;font-size:.85rem}
+  .agent-card{cursor:pointer}</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>⚡ 機電署註冊電業承辦商 · 全港服務</span>
+    <span><a href="mailto:Kongpower28@gmail.com">📧 Kongpower28@gmail.com</a></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo-link">
+      <div class="logo-icon">☀</div>
+      <div class="logo-text"><div class="brand">港力<em>工程</em></div><div class="sub">KONGPOWER LIMITED</div></div>
+    </a>
+    <nav>
+      <a href="#services">服務</a><a href="#cases">案例</a><a href="#agents">AI 團隊</a><a href="#calc">回本計</a><a href="#faq">常見問題</a><a href="#contact">聯絡</a>
+    </nav>
+    <a href="#contact" class="cta-top">免費報價</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div><div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="dot"></span>🦾 AI 驅動智慧太陽能</div>
+      <h1>用陽光，<br>幫你嘅屋頂<br><span class="gradient">變成印鈔機</span>。</h1>
+      <a href="#calc" style="display:inline-flex;align-items:center;gap:.4rem;background:#fef3c7;color:#92400e;border:1px solid #fde047;padding:.4rem 1rem;border-radius:9999px;font-size:.8rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;margin-bottom:1.25rem" onmouseover="this.style.background='#fde047'" onmouseout="this.style.background='#fef3c7'">💰 睇回本計算 →</a>
+      <p>港力工程 — 機電署註冊電業承辦商。政府 FiT 上網電價延至 2033，越早裝越賺。村屋、學校、屋苑太陽能系統，由港力親身上門睇位到完工，一條龍唔使煩。</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-dark">📋 免費報價</a>
+        <a href="#services" class="btn-outline">睇服務 →</a>
+      </div>
+      <div class="hero-checks">
+        <span><span class="check">✓</span>免費上門評估</span>
+        <span><span class="check">✓</span>FiT 申請代辦</span>
+        <span><span class="check">✓</span>一條龍唔使煩</span>
+      </div>
+    </div>
+    <div class="hero-img"><span class="emoji">☀️</span><span class="label">日光 · YAT GWONG</span><span class="sub">港力工程 AI 能源主管</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-white" id="services">
+  <div class="max-w-7xl">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
+      <div>
+        <div class="section-label">⚡ 我哋做咩</div>
+        <h2 class="section-title" style="margin-bottom:0">三大<em>核心服務</em></h2>
+      </div>
+      <a href="#calc" style="display:inline-flex;align-items:center;gap:.4rem;background:#fef3c7;color:#92400e;border:1px solid #fde047;padding:.5rem 1rem;border-radius:9999px;font-size:.8rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;margin-top:.25rem" onmouseover="this.style.background='#fde047'" onmouseout="this.style.background='#fef3c7'">💰 睇回本計算 →</a>
+    </div>
+    <p class="section-desc">機電署註冊、全港服務。村屋學校屋苑 — 我哋都做過，有齊經驗。</p>
+    <div class="card-grid">
+      <div class="card"><div class="card-icon green">☀️</div><h3>太陽能光伏系統</h3><p>村屋 5-10 kW 高效系統，港力親身上門用 AI 分析日照角度，精準設計最高發電效率。一條龍包 FiT 申請、安裝、20 年保養。最快 2 個月完成併網開始收錢。</p><div class="card-tags"><span class="card-tag">安裝</span><span class="card-tag">FiT 申請</span><span class="card-tag">保養</span><span class="card-tag">上網電價</span></div></div>
+      <div class="card"><div class="card-icon green">🔌</div><h3>水電裝修工程</h3><p>住宅、學校、屋苑全屋電力系統。註冊電業工程人員主理，WR2 年檢、電錶升級、全屋佈線。安全可靠，符合機電署法例要求。</p><div class="card-tags"><span class="card-tag">WR2 年檢</span><span class="card-tag">電錶升級</span><span class="card-tag">佈線</span><span class="card-tag">維修</span></div></div>
+      <div class="card"><div class="card-icon blue">🏗️</div><h3>打拆 + 天台防水</h3><p>合法清拆僭建物，專業團隊處理，符合屋宇署要求。裝太陽能板前先做好天台防水隔熱，確保萬無一失。</p><div class="card-tags"><span class="card-tag">清拆</span><span class="card-tag">屋宇署</span><span class="card-tag">防水</span><span class="card-tag">一條龍</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calc" style="background:linear-gradient(135deg,#022c22,#047857);color:#fff;padding:6rem 0">
+  <div class="max-w-7xl">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+      <!-- LEFT -->
+      <div>
+        <div style="color:#fde047;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:.75rem">ROI Calculator</div>
+        <h2 style="font-size:2.25rem;font-weight:800;line-height:1.15;letter-spacing:-.015em;margin-bottom:1.5rem">500 平方呎屋頂，<br><span style="color:#fde047">每月可賺 $2,375</span>。</h2>
+        <p style="color:#a7f3d0;line-height:1.7;margin-bottom:2rem;max-width:28rem">下面係一個典型村屋 8 kW 系統嘅實際數字。你嘅屋頂可能仲好賺 — 我哋幫你度身計算。</p>
+        <a href="#contact" style="background:#facc15;color:#022c22;padding:1rem 1.75rem;border-radius:9999px;font-weight:700;display:inline-flex;align-items:center;gap:.5rem;transition:all .2s;font-size:.95rem;text-decoration:none" onmouseover="this.style.background='#fde047'" onmouseout="this.style.background='#facc15'">拎你嘅專屬計算 →</a>
+      </div>
+      <!-- RIGHT: frosted glass card -->
+      <div style="background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.2);border-radius:1.5rem;padding:2rem">
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1)">
+            <span style="color:#a7f3d0;font-size:.95rem">屋頂面積</span>
+            <span style="font-weight:800;font-size:1.25rem;color:#fde047">500 ft²</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1)">
+            <span style="color:#a7f3d0;font-size:.95rem">可裝太陽能板</span>
+            <span style="font-weight:800;font-size:1.25rem;color:#fde047">8 kW 系統</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1)">
+            <span style="color:#a7f3d0;font-size:.95rem">年發電量</span>
+            <span style="font-weight:800;font-size:1.25rem;color:#fde047">≈ 9,500 度</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1)">
+            <span style="color:#a7f3d0;font-size:.95rem">年 FiT 收入</span>
+            <span style="font-weight:800;font-size:1.25rem;color:#fde047">$28,500</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem">
+            <span style="color:#a7f3d0;font-size:.95rem">回本年期</span>
+            <span style="font-weight:800;font-size:1.25rem;color:#fde047">約 4–5 年</span>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.2);text-align:center">
+          <div style="font-size:.75rem;color:#6ee7b7;margin-bottom:.25rem">25 年總收益估算</div>
+          <div style="font-size:2.5rem;font-weight:800;color:#fde047">$712,500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE SHOWCASE -->
+<section class="section section-light" id="cases">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">📸 真實案例</div>
+    <h2 class="section-title">每個工程，<em>都係一份承諾</em></h2>
+    <p class="section-desc" style="margin:0 auto 3rem">港力親手跟進每個項目，以下係部份完成案例。</p>
+    <div class="card-grid">
+      <div class="card" style="text-align:center"><div style="font-size:4rem;margin-bottom:1rem">🏘️</div><h3>元朗村屋 8 kW 系統</h3><p>20 塊高效板 · 年發電約 9,500 度 · 年 FiT 收入約 $28,000</p><div class="card-tags" style="justify-content:center"><span class="card-tag">村屋</span><span class="card-tag">FiT</span><span class="card-tag">4 年回本</span></div></div>
+      <div class="card" style="text-align:center"><div style="font-size:4rem;margin-bottom:1rem">🏫</div><h3>粉嶺學校 30 kW 系統</h3><p>禮堂天台全覆蓋 · 供應全校 30% 用電 · 年減碳 28 噸</p><div class="card-tags" style="justify-content:center"><span class="card-tag">學校</span><span class="card-tag">節能</span><span class="card-tag">綠色校園</span></div></div>
+      <div class="card" style="text-align:center"><div style="font-size:4rem;margin-bottom:1rem">🏢</div><h3>大埔屋苑停車場上蓋</h3><p>太陽能上蓋 + 充電樁 · 發電同時遮陰 · 全年發電約 15,000 度</p><div class="card-tags" style="justify-content:center"><span class="card-tag">屋苑</span><span class="card-tag">車場上蓋</span><span class="card-tag">EV 充電</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI AGENTS -->
+<section class="section section-white" id="agents">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">🦾 AI 團隊</div>
+    <h2 class="section-title"><em>日光</em> 指揮嘅 AI 小隊</h2>
+    <p class="section-desc" style="margin:0 auto 3rem">港力團隊親自睇場，AI 幫手報價、計數、客服，24/7 唔使等。</p>
+    <div class="agents-grid">
+      <div class="agent-card" onclick="window.open('https://wa.me/85297522975?text=你好港力工程，我想查詢：太陽能/水電/打拆/防水','_blank')"><div class="agent-icon">💬</div><div class="agent-name">QuoteBot</div><div class="agent-role">Send 相 → AI 即時出估價，唔使等人手覆，最快收到錢</div></div>
+      <div class="agent-card" onclick="window.open('https://wa.me/85297522975?text=你好港力工程，我想查詢報價','_blank')"><div class="agent-icon">🧮</div><div class="agent-name">SaveCalc</div><div class="agent-role">入電費單 → AI 計晒幾耐回本、每月賺幾多，最強說服力</div></div>
+      <div class="agent-card" onclick="window.open('https://wa.me/85297522975?text=你好港力工程，我想預約上門睇位','_blank')"><div class="agent-icon">📅</div><div class="agent-name">BookMate</div><div class="agent-role">24/7 幫客 book 上門度尺，自動 sync 日曆，最少甩單</div></div>
+      <div class="agent-card" onclick="window.open('https://wa.me/85297522975?text=你好港力工程，我想了解你哋服務','_blank')"><div class="agent-icon">🤖</div><div class="agent-name">HelpBot</div><div class="agent-role">AI 智能客服，自動答：太陽能點裝？幾錢？幾耐回本？秒回唔使等</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BACKEND AI AGENTS -->
+<section class="section section-dark" id="backend-agents">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem;background:rgba(5,150,105,.2);color:#6ee7b7;border-color:rgba(5,150,105,.3)">⚙️ 後台 AI</div>
+    <h2 class="section-title">幕後<em>AI 引擎</em></h2>
+    <p class="section-desc" style="margin:0 auto 3rem">呢兩個 AI 24/7 背後做嘢，唔使理佢，自動幫你搵客。</p>
+    <div class="agents-grid">
+      <div class="agent-card"><div class="agent-icon">📈</div><div class="agent-name">RankUp</div><div class="agent-role">AI SEO 優化引擎 — 分析關鍵字、建議 meta tag、提升 Google 排名，自動吸客</div></div>
+      <div class="agent-card"><div class="agent-icon">✍️</div><div class="agent-name">PostGen</div><div class="agent-role">AI 社交媒體寫手 — 自動 generate FB/IG/Threads post、成功案例、客戶見證</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="section section-light" id="clients">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">🏘️ 服務對象</div>
+    <h2 class="section-title">全香港<em>都做</em></h2>
+    <p class="section-desc" style="margin:0 auto 2rem">你係邊類客戶都得</p>
+    <div class="client-row">
+      <div class="client-chip"><span class="icon">🏘️</span>村屋</div>
+      <div class="client-chip"><span class="icon">🏫</span>學校</div>
+      <div class="client-chip"><span class="icon">🏢</span>屋苑</div>
+      <div class="client-chip"><span class="icon">🏠</span>私樓</div>
+      <div class="client-chip"><span class="icon">🏭</span>工廈</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS + CERT -->
+<section class="section section-dark">
+  <div class="max-w-7xl">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-icon">🏘️</div><div class="stat-label">村屋太陽能專家<br>新界各區都有案例</div></div>
+      <div class="stat-card"><div class="stat-icon">🏫</div><div class="stat-label">學校 + 屋苑經驗<br>工程零延誤紀錄</div></div>
+      <div class="stat-card"><div class="stat-icon">📜</div><div class="stat-label">機電署註冊認證<br>電業承辦商 + 工程人員</div></div>
+      <div class="stat-card"><div class="stat-icon">🤝</div><div class="stat-label">一條龍唔使煩<br>FiT 申請 → 安裝 → 保養</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section section-light">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">⭐ 客戶好評</div>
+    <h2 class="section-title">客人<em>點講</em>我哋？</h2>
+    <p class="section-desc" style="margin:0 auto 3rem">以下係真實客戶評價</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <div class="review-text">"港力好專業！我嗰間元朗村屋，由 WhatsApp 查詢到安裝完成只係兩個月。而家每個月電費慳咗一半，仲有上網電價收入，真係屋頂變印鈔機！"</div>
+        <div class="review-author">陳生</div>
+        <div class="review-location">元朗村屋 · 8 kW 系統 · 2025 年安裝</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <div class="review-text">"學校搵咗幾間報價，港力最老實，冇 hidden fee。30 kW 系統準時完工，而家覆蓋全校三成用電，學生仲可以睇住個發電 dashboard 上常識堂！"</div>
+        <div class="review-author">李校長</div>
+        <div class="review-location">粉嶺學校 · 30 kW 系統 · 2025 年安裝</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <div class="review-text">"停車場上蓋工程好大，港力團隊好有經驗。太陽能板做埋遮陰，一舉兩得。之後保養跟得好足，有咩事 WhatsApp 即覆。"</div>
+        <div class="review-author">張經理</div>
+        <div class="review-location">大埔屋苑 · 停車場上蓋 · 2025 年安裝</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section section-white">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">🏷️ 合作品牌</div>
+    <h2 class="section-title">用嘅<em>太陽能板</em></h2>
+    <p class="section-desc" style="margin:0 auto 2rem">我哋選用國際認證高效太陽能板（牌子後補）</p>
+    <div class="brand-row">
+      <div class="brand-chip">☀️ 品牌 A</div>
+      <div class="brand-chip">☀️ 品牌 B</div>
+      <div class="brand-chip">☀️ 品牌 C</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="section section-light">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">📋 流程</div>
+    <h2 class="section-title">查詢到搞掂，<em>就係咁簡單</em></h2>
+    <div class="flow" style="margin-top:3rem">
+      <div class="flow-step"><div class="icon">💬</div><div class="label">WhatsApp 查詢</div></div><div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">👷</div><div class="label">港力上門睇</div></div><div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">📋</div><div class="label">即時報價</div></div><div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">🔧</div><div class="label">專業施工</div></div><div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">✅</div><div class="label">搞掂收工</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-white" id="faq">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem">❓ 常見問題</div>
+    <h2 class="section-title">太陽能<em> FAQ</em></h2>
+    <div class="faq-list" style="margin-top:2rem">
+      <div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">☀️ 裝太陽能板要幾錢？幾耐回本？<span>▾</span></div><div class="faq-a">村屋常見 5-10 kW 系統，連安裝及 FiT 申請約 $80,000 – $150,000。配合政府上網電價（$3/度起），一般 4-6 年內回本，之後 15+ 年純收入。上面回本計算器可以即時睇你屋企嘅回報。</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">🔍 我啲屋頂啱唔啱裝？<span>▾</span></div><div class="faq-a">大部分新界村屋、屋苑天台都啱裝。港力免費上門評估，檢查日照角度、結構承重、天台狀況，即場話到你知可以裝幾多 kW。</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">📝 FiT 上網電價計劃要點申請？<span>▾</span></div><div class="faq-a">現行 FiT 計劃由中電／港燈支持至 2033 年，越早裝越好賺。港力一條龍幫你搞：入紙、圖則、申報、併網測試，你完全唔使煩。</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">🏗️ 裝太陽能板前使唔使做防水？<span>▾</span></div><div class="faq-a">建議做！我哋提供天台防水 + 隔熱一條龍服務。喺裝板之前處理好防水層，確保天台唔漏水，太陽能系統先可以穩陣用 20 年以上。</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">🛡️ 有冇保養？保幾耐？<span>▾</span></div><div class="faq-a">有！我哋提供全面保養服務。AI Guardian 系統 24/7 監控發電狀況，有異常即時 alert，未壞先修。20 年內有咩問題 WhatsApp 即覆。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-dark" id="contact">
+  <div class="max-w-7xl" style="text-align:center">
+    <div class="section-label" style="margin:0 auto 1rem;background:rgba(5,150,105,.2);color:#6ee7b7;border-color:rgba(5,150,105,.3)">📞 聯絡</div>
+    <h2 class="section-title">開始你嘅<em>綠色能源旅程</em></h2>
+    <p class="section-desc" style="margin:0 auto 1.5rem">港力免費上門睇位，即場話你知屋頂可裝幾多 kW，每年賺幾多。一條龍包 FiT 申請、安裝、保養。</p>
+
+    <div style="max-width:480px;margin:0 auto 2rem">
+      <form id="contact-form" onsubmit="submitForm(event)">
+      <div class="form-group"><label>你嘅名</label><input type="text" name="name" placeholder="陳生 / 李太" required></div>
+      <div class="form-group"><label>電話 / WhatsApp</label><input type="tel" name="phone" placeholder="9123 4567" required></div>
+      <div class="form-group"><label>想查詢咩？</label><textarea name="message" placeholder="e.g. 村屋想裝太陽能板，想知大約幾錢同幾耐回本" required></textarea></div>
+      <button type="submit" id="submit-btn" class="btn-emerald" style="width:100%">📩 Send 出查詢</button>
+      <div id="form-msg" style="margin-top:1rem;font-weight:600;display:none"></div>
+      </form>
+    </div>
+
+    <div class="contact-grid" style="margin-top:2rem">
+      <div class="contact-card"><div class="icon">📞</div><div class="label">電話 / WhatsApp</div><div class="value">9752 2975</div></div>
+      <div class="contact-card"><div class="icon">✉️</div><div class="label">電郵</div><div class="value">Kongpower28@gmail.com</div></div>
+      <div class="contact-card"><div class="icon">👷</div><div class="label">工程部主管</div><div class="value">蔡新昌</div></div>
+      <div class="contact-card"><div class="icon">📜</div><div class="label">認證</div><div class="value" style="font-size:.8rem">機電署註冊<br>電業承辦商</div></div>
+    </div>
+
+    <p style="color:#a8a29e;font-size:.8rem;margin-top:2rem">🌐 <a href="https://kongpower.hk" style="color:#6ee7b7;text-decoration:underline">kongpower.hk</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <span class="name">港力工程有限公司</span> · KONGPOWER LIMITED</p>
+  <p style="margin-top:.25rem">機電署註冊電業承辦商 · 蔡新昌 工程部主管</p>
+  <p style="margin-top:.5rem">📞 9752 2975 · 📧 Kongpower28@gmail.com</p>
+  <p style="margin-top:.5rem;color:#059669">🦾 AI 驅動太陽能 · Powered by 日光 YAT GWONG</p>
+</footer>
+
+<!-- CHAT MODAL -->
+<div id="chatModal">
+  <div class="chat-box">
+    <div class="chat-header">
+      <div class="agent-avatar" id="chatAvatar"></div>
+      <div><div class="agent-title" id="chatName"></div><div class="agent-sub" id="chatRole"></div></div>
+      <button class="chat-close" onclick="closeChat()">✕</button>
+    </div>
+    <div class="chat-msgs" id="chatMsgs"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="打字問嘢..." onkeydown="if(event.key==='Enter')sendChat()">
+      <button onclick="sendChat()">Send ➤</button>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/85297522975" class="whatsapp-float" target="_blank" title="WhatsApp 查詢">💬</a>
+
+<script>
+// ============================================================================
+// 港力工程 — AI Agent Chat + Contact Form
+// ============================================================================
+const API_BASE = 'http://localhost:8520';
+const AGENTS = {
+  quotebot: {id:'quotebot',name:'QuoteBot',emoji:'💬',role:'AI 即時估價',endpoint:'/api/quote',placeholder:'講下你屋頂情況（幾大、咩類型、位置）...'},
+  savecalc: {id:'savecalc',name:'SaveCalc',emoji:'🧮',role:'AI 回報計算',endpoint:'/api/calc',placeholder:'提供你嘅電費資料 / 屋頂面積 / 每月電費...'},
+  bookmate: {id:'bookmate',name:'BookMate',emoji:'📅',role:'AI 預約上門',endpoint:'/api/book',placeholder:'留低你個名、電話、想約邊日...'},
+  helpbot:  {id:'helpbot',name:'HelpBot',emoji:'🤖',role:'AI 智能客服',endpoint:'/api/chat',placeholder:'有咩想問？太陽能點裝？幾錢？...'},
+  rankup:   {id:'rankup',name:'RankUp',emoji:'📈',role:'AI SEO 優化',endpoint:'/api/rankup',placeholder:'貼你想分析嘅網頁內容或關鍵字...'},
+  postgen:  {id:'postgen',name:'PostGen',emoji:'✍️',role:'AI 社交媒體寫手',endpoint:'/api/postgen',placeholder:'想寫咩主題？（e.g. 村屋太陽能回本期）...'},
+};
+
+let currentAgent = null;
+
+function openChat(id) {
+  currentAgent = AGENTS[id];
+  document.getElementById('chatAvatar').textContent = currentAgent.emoji;
+  document.getElementById('chatName').textContent = currentAgent.name;
+  document.getElementById('chatRole').textContent = currentAgent.role;
+  document.getElementById('chatInput').placeholder = currentAgent.placeholder;
+  document.getElementById('chatMsgs').innerHTML = `<div class="chat-msg agent">${currentAgent.emoji} 你好！我係${currentAgent.name}，${currentAgent.role}。有咩幫到你？</div>`;
+  document.getElementById('chatModal').classList.add('show');
+  document.getElementById('chatInput').focus();
+}
+
+function closeChat() {
+  document.getElementById('chatModal').classList.remove('show');
+  currentAgent = null;
+}
+
+function addMsg(text, cls) {
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + cls;
+  div.textContent = text;
+  document.getElementById('chatMsgs').appendChild(div);
+  document.getElementById('chatMsgs').scrollTop = document.getElementById('chatMsgs').scrollHeight;
+}
+
+function showTyping() {
+  const div = document.createElement('div');
+  div.className = 'chat-msg agent';
+  div.id = 'typing-indicator';
+  div.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+  document.getElementById('chatMsgs').appendChild(div);
+  document.getElementById('chatMsgs').scrollTop = document.getElementById('chatMsgs').scrollHeight;
+}
+
+function hideTyping() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+async function sendChat() {
+  if (!currentAgent) return;
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  addMsg(text, 'user');
+  input.value = '';
+  showTyping();
+
+  try {
+    // For BookMate, send as contact form with name/phone
+    const body = currentAgent.id === 'bookmate'
+      ? JSON.stringify({name:text.split(/[\s,，]+/)[0]||'客戶', phone:text.match(/\d{8}/)?.[0]||'未有', message:text})
+      : JSON.stringify({message:text});
+
+    const resp = await fetch(API_BASE + currentAgent.endpoint, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: body
+    });
+    const json = await resp.json();
+    hideTyping();
+    addMsg(json.reply || json.error || '冇回應，請再試', 'agent');
+  } catch (err) {
+    hideTyping();
+    addMsg('⚠️ AI 暫時連接唔到。請 WhatsApp 直接聯絡我哋：+852 91234567', 'agent');
+  }
+}
+
+// Close on background click
+document.getElementById('chatModal').addEventListener('click', function(e) {
+  if (e.target === this) closeChat();
+});
+
+// ============================================================================
+// Contact Form
+// ============================================================================
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const msg = document.getElementById('form-msg');
+  const form = document.getElementById('contact-form');
+
+  btn.disabled = true;
+  btn.textContent = '⏳ 傳送中...';
+  msg.style.display = 'none';
+
+  try {
+    const data = new FormData(form);
+    const resp = await fetch(API_BASE + '/contact', { method: 'POST', body: data });
+    const json = await resp.json();
+
+    if (json.success) {
+      msg.textContent = '✅ ' + json.message;
+      msg.style.color = '#6ee7b7';
+      msg.style.display = 'block';
+      form.reset();
+    } else {
+      msg.textContent = '⚠️ ' + (json.error || '出錯，請再試');
+      msg.style.color = '#fca5a5';
+      msg.style.display = 'block';
+    }
+  } catch (err) {
+    msg.textContent = '⚠️ 連接失敗，請 WhatsApp 或致電聯絡我哋';
+    msg.style.color = '#fca5a5';
+    msg.style.display = 'block';
+  }
+
+  btn.disabled = false;
+  btn.textContent = '📩 Send 出查詢';
+}
+</script>
+</body>
+</html>
